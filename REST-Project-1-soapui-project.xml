@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="d19f80fc-3ea3-4657-a1c6-ad4101329cbe" activeEnvironment="Default" name="REST Project 1" soapui-version="5.5.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="24bb63b9-5cf4-4cff-9070-c324686feb1a" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://dev57484.service-now.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://dev57484.service-now.com</con:endpoint></con:endpoints><con:resource name="Incident" path="/api/now/table/incident" id="a325ac27-1624-4713-9082-30e701a341d7"><con:settings/><con:parameters/><con:method name="CreateIncident" id="0a4e5537-f4e9-4a63-93dd-d07bc4a37287" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>201</con:status><con:params/><con:element xmlns:inc="https://dev57484.service-now.com/api/now/table/incident">inc:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Creation" id="321f7735-a539-458d-8bb5-6da0bfc446ca" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev57484.service-now.com</con:endpoint><con:request>{"short_description":"Testing",
+"description":"This is test API"}
+</con:request><con:originalUri>https://dev57484.service-now.com/api/now/table/incident</con:originalUri><con:credentials><con:username>admin</con:username><con:password>Thiaga1989$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="eb412d72-6aa4-4b29-8a3f-192f3f8cef88" wadlVersion="http://wadl.dev.java.net/2009/02" name="https://dev57484.service-now.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>https://dev57484.service-now.com</con:endpoint></con:endpoints><con:resource name="Sys_id" path="/api/now/table/incident/{sys_id}" id="3b46a9f7-bf6c-44e7-a29a-be5e5b026f0a"><con:settings/><con:parameters><con:parameter><con:name>sys_id</con:name><con:value>sys_id</con:value><con:style>TEMPLATE</con:style><con:default>sys_id</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="IncidentDetails" id="a1ecf6d0-54e4-4f09-ba0d-67353aaeaedf" method="GET"><con:settings/><con:parameters/><con:representation type="FAULT"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>401</con:status><con:params/><con:element xmlns:d2f="https://dev57484.service-now.com/api/now/table/incident/d2f30192dbe14010e2169444ca9619f7">d2f:Fault</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:d2f="https://dev57484.service-now.com/api/now/table/incident/d2f30192dbe14010e2169444ca9619f7">d2f:Response</con:element></con:representation><con:request name="GetIncident" id="934f1212-63ae-4acc-a571-cb970c4ee826" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev57484.service-now.com</con:endpoint><con:request/><con:originalUri>https://dev57484.service-now.com/api/now/table/incident/d2f30192dbe14010e2169444ca9619f7</con:originalUri><con:credentials><con:username>admin</con:username><con:password>Thiaga1989$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="sys_id" value="d2f30192dbe14010e2169444ca9619f7" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>sys_id</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="fa495234-fca7-46e9-9ae6-d81702a29910" name="TS_01"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="d486d195-60d9-4d56-891b-6365b59704e7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Tc01" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="CreateInc" id="1f243660-30cd-4fd1-ac20-81de538e7c2d"><con:settings/><con:config service="https://dev57484.service-now.com" resourcePath="/api/now/table/incident" methodName="CreateIncident" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="CreateInc" id="321f7735-a539-458d-8bb5-6da0bfc446ca" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev57484.service-now.com</con:endpoint><con:request>{"short_description":"Testing",
+"description":"This is test API"}
+</con:request><con:originalUri>https://dev57484.service-now.com/api/now/table/incident</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="228c3563-67f5-4443-afb3-8251c88726b8" name="Valid HTTP Status Codes"><con:configuration><codes>201
+</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="202b01eb-13a4-40ee-bd76-1ef443ff8c30" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper
+resp = messageExchange.response.responseContent
+jsonResp = new JsonSlurper().parseText(resp)
+
+verify  = jsonResp.result.category
+
+assert(verify=="inquiry")</scriptText></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>Thiaga1989$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="GetInc" id="9a05a840-e001-40e7-b547-cc03dabc96da"><con:settings/><con:config service="https://dev57484.service-now.com" resourcePath="/api/now/table/incident/{sys_id}" methodName="IncidentDetails" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="GetInc" id="934f1212-63ae-4acc-a571-cb970c4ee826" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>https://dev57484.service-now.com</con:endpoint><con:request/><con:originalUri>https://dev57484.service-now.com/api/now/table/incident/d2f30192dbe14010e2169444ca9619f7</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="e1cbee0e-9b0e-4387-984e-68fe873b8f75" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:username>admin</con:username><con:password>Thiaga1989$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="sys_id" value="${#Global#sessionid}" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>sys_id</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="PropertyTransfer" id="2ec5d889-d8ee-4ec4-9721-37d2b655c8a5"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+runCreate = testRunner.testCase.testSteps["CreateInc"]
+runCreate.run(testRunner,context)
+
+getResponse = context.expand('${CreateInc#response}')
+jsonResp = new JsonSlurper().parseText(getResponse)
+sessionId  = jsonResp.result.sys_id
+
+
+
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("sessionid",sessionId)
+
+runCreate = testRunner.testCase.testSteps["GetInc"]
+runCreate.run(testRunner,context)
+
+getResponse = context.expand('${GetInc#response}')
+jsonResp1 = new JsonSlurper().parseText(getResponse)
+CreateName  = jsonResp1.result.sys_updated_by
+
+if(CreateName=="admin")
+{log.info "pass"}
+else
+{log.info "fail"}
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="d66b6a18-21c2-4775-9139-92b08b73645c" name="TS_02"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="97edfcb6-2012-4e6d-8b9d-9e90b200d84e" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Tc02" searchProperties="true"><con:settings/><con:testStep type="groovy" name="PropertyTransfer2" id="c68f7fa0-01bb-435d-870d-126405b4ee01"><con:settings/><con:config><script>import groovy.json.JsonSlurper
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext 
+
+
+runCreate = testRunner.testCase.testSuite.project.testSuites["TS_01"].testCases["Tc01"].testSteps["CreateInc"]
+runCreate.run(testRunner,context)
+
+diffcontext  = new WsdlTestRunContext(runCreate)
+
+getResponse = diffcontext.expand('${CreateInc#response}')
+jsonResp = new JsonSlurper().parseText(getResponse)
+sessionId  = jsonResp.result.sys_id
+
+
+
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("sessionid",sessionId)
+
+runCreate = testRunner.testCase.testSuite.project.testSuites["TS_01"].testCases["Tc01"].testSteps["GetInc"]
+runCreate.run(testRunner,context)
+
+diffcontext2  = new WsdlTestRunContext(runCreate)
+
+getResponse1 = diffcontext2.expand('${GetInc#response}')
+jsonResp1 = new JsonSlurper().parseText(getResponse1)
+CreateName  = jsonResp1.result.sys_updated_by
+
+if(CreateName=="admin")
+{log.info "pass"}
+else
+{log.info "fail"}
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
